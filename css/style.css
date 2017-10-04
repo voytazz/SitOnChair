@@ -1,0 +1,1977 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 5vh;
+    align-items: center;
+}
+
+.blackBg {
+    background-color: black;
+}
+
+.gradientBg {
+    background: rgba(255, 255, 255, 1);
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(47%, rgba(246, 246, 246, 1)), color-stop(100%, rgba(237, 237, 237, 1)));
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed', GradientType=0);
+}
+
+.smallContainer {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.logo {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    padding: 0 25px;
+}
+
+.greenSpan {
+    color: #24BA9F;
+}
+
+header li {
+    display: inline-block;
+    font-size: 1.25rem;
+    padding: 0 25px;
+}
+
+header li a {
+    color: white;
+    text-decoration: none;
+}
+
+/*DROPDOWN MENU ////////////*/
+
+.menuOnHover li {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.hovermenu {
+    position: relative;
+}
+
+.menuOnHover li {
+    padding: 10px 10px;
+}
+
+.menuOnHover {
+    background: black;
+    position: absolute;
+    margin-top: 20px;
+    display: none;
+}
+
+.menuOnHover::before {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 20px;
+    background: transparent;
+    position: absolute;
+    top: -20px;
+}
+
+.menuOnHover::after {
+    display: block;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: black;
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 10px);
+    transform: rotate(45deg);
+}
+
+
+/*MAIN SECTION WITH SLIDER ///////////////*/
+
+.mainSlider {
+    display: flex;
+}
+
+.changePrev {
+    width: 10%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square {
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+    border-left: 3px solid #24BA9F;
+    border-bottom: 3px solid #24BA9F;
+}
+
+
+
+.squareNext {
+    transform: rotate(225deg);
+}
+
+.mainPhoto {
+    width: 40%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainPhoto img {
+    width: 100%;
+}
+
+.mainPhoto ul {
+    list-style: none;
+}
+
+.mainPhoto li {
+    display: none;
+}
+
+.mainPhoto .visible {
+    display: inline-block;
+}
+
+.mainText {
+    width: 40%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.mainText p {
+    width: 70%;
+}
+
+.mainText h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5%;
+}
+
+.mainButton {
+    margin-top: 5%;
+    width: 60%;
+    height: 10%;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #24BA9F;
+    border-radius: 10px;
+    border: none;
+}
+
+.changeNext {
+    width: 10%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SECTIONS WITH PHOTOS ////////////*/
+
+.boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 30%;
+    height: 30vh;
+    margin: 3% 0px;
+    border: 1px solid lightgray;
+}
+
+.box:first-child {
+    background: url(../images/box1_img.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.box:nth-child(2) {
+    background: url(../images/box2_img.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 0 2%;
+    position: relative;
+}
+
+.opacityBackground {
+    width: 100%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 65%;
+}
+
+.opacityBackground p {
+    font-size: 1.1rem;
+    margin: 0 5%;
+    font-weight: 500;
+    border-bottom: 5px solid #24BA9F;
+    width: 50%;
+}
+
+.box:nth-child(3) {
+    padding: 20px;
+    overflow: hidden;
+}
+
+.box h3 {
+    border-bottom: 5px solid #24BA9F;
+    width: 50%;
+}
+
+.cost {
+    display: flex;
+    justify-content: center;
+}
+
+.container:nth-child(4) {
+    background-color: #efefef;
+}
+
+.container h2 {
+    border-bottom: 5px solid #24BA9F;
+    width: 10%;
+    margin-left: 15%;
+    font-size: 1.6rem;
+    padding-top: 30px;
+    margin-bottom: 10px;
+    color: dimgray;
+}
+
+.costbox {
+    width: 30%;
+    height: 55vh;
+    background: white;
+    border: 1px solid lightgray;
+    margin: 5% 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.costbox::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-color: gray;
+    position: absolute;
+    top: -50px;
+    border-radius: 50%;
+    border: 20px solid white;
+    box-shadow: 0 0 0 1px lightgray;
+}
+
+.costbox h3 {
+    color: #24BA9F;
+    font-size: 1.5rem;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    text-transform: uppercase;
+}
+
+.circle {
+    height: 125px;
+    width: 125px;
+    border-radius: 50% 50%;
+    border: 2px solid lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: gray;
+    margin-bottom: 10%;
+}
+
+.costDarkGrayRow {
+    width: 100%;
+    height: 7%;
+    background: #dedede;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    color: gray;
+}
+
+.costLightGrayRow {
+    width: 100%;
+    height: 7%;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    color: #696868;
+}
+
+.costBoxButton {
+    width: 35%;
+    height: 7%;
+    border-radius: 10px;
+    border: none;
+    background-color: #24BA9F;
+    font-size: 1.25rem;
+    color: white;
+    position: absolute;
+    bottom: 5%;
+}
+
+.costbox:nth-child(2) {
+    background-color: #24BA9F;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.costbox:nth-child(2)::before {
+    background-color: white;
+    border-color: #24BA9F;
+    box-shadow: none;
+}
+
+.costbox:nth-child(2) h3 {
+    color: white;
+}
+
+.costbox:nth-child(2) .circle,
+.costbox:nth-child(2) button {
+    color: #24BA9F;
+    background-color: white;
+}
+
+.contactForm {
+    width: 60%;
+}
+
+.contact.smallContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact form input {
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+    resize: vertical;
+    border: 1px solid #24BA9F;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.contact form textarea {
+    width: 100%;
+    height: 200px;
+    margin: 20px 0;
+    resize: vertical;
+    border: 1px solid #24BA9F;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.contactImg {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact img {
+    margin-bottom: 5%;
+    width: 60%;
+}
+
+.contact input[type=checkbox] {
+    width: 40px;
+    height: 40px;
+}
+
+.contact input[type=button] {
+    margin: 5% 0px;
+    padding: 10px 25px;
+    width: 50%;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: none;
+    text-transform: uppercase;
+    background: #24BA9F;
+    color: white;
+}
+
+.checkboxAccept label {
+    margin-left: 10px;
+}
+
+.checkboxAccept {
+    display: flex;
+}
+
+.footerInfo {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: gray;
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+}
+
+footer span {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.main_width {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.application {
+    background-color: #f9f9f9;
+    padding: 30px 0;
+}
+
+.application h3 {
+    color: #575757;
+    font-size: 1.3rem;
+}
+
+.application header.align_right {
+    text-align: right;
+}
+
+
+.inline {
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+}
+
+
+.form {
+    margin-top: 50px;
+}
+
+.drop_down_list {
+    border: 1px solid #8de0d2;
+    width: 80%;
+    height: 38px;
+    background-color: white;
+    margin-top: 22px;
+    position: relative;
+    
+}
+
+.list_label {
+    font-size: 1.6rem;
+    color: #e2e2e2;
+    font-family: 'ralewaylight', Arial, Tahoma, sans-serif;
+}
+
+
+.checkbox {
+    position: relative;
+    padding: 30px 30px 30px 0;
+}
+
+.checkbox input {
+    display: block;
+    opacity: 0;
+    height: 48px;
+    position: absolute;
+    width: 48px;
+    cursor: pointer;
+}
+
+.checkbox label {
+    display: block;
+    padding-left: 65px;
+    position: relative;
+    font-size: 1.5rem;
+    color: #cecece;
+    line-height: 120%;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.checkbox label::before,
+.checkbox label::after {
+    border: 1px solid #27c7ab;
+    content: "";
+    display: block;
+    left: 0;
+    height: 48px;
+    position: absolute;
+    width: 48px;
+    top: 0;
+}
+
+.checkbox label::after {
+    background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20preserveAspectRatio%3D%22xMidYMid%22%20width%3D%2233.875%22%20height%3D%2233%22%20viewBox%3D%220%200%2033.875%2033%22%3E%0A%20%20%3Cpath%20d%3D%22M9.470%2C15.209%20L14.061%2C24.104%20C14.061%2C24.104%2021.522%2C6.026%2033.287%2C-0.000%20C33.000%2C4.304%2031.852%2C8.035%2033.861%2C12.626%20C28.696%2C13.774%2018.078%2C26.687%2014.635%2C33.000%20C9.756%2C26.974%204.017%2C22.382%20-0.000%2C20.948%20L9.470%2C15.209%20Z%22%20fill%3D%22%2327c7ab%22/%3E%0A%3C/svg%3E%0A") no-repeat center;
+    border: 0;
+    display: none;
+}
+
+.checkbox input:checked + label::after {
+    display: block;
+}
+
+
+.active {
+    background: url('../images/form_ok.jpg');
+    width: 48px;
+    height: 40px;
+
+}
+
+.inline_text {
+    display: inline-block;
+    width: 228px;
+    vertical-align: top;
+    margin-top: 30px;
+    margin-left: 15px;
+    color: #aeaeae;
+}
+
+.image_part img {
+    margin-top: 110px;
+    margin-left: 38px;
+}
+
+
+.application .green_bell {
+    background-color: #24baa0;
+    width: 80%;
+    height: 5px;
+    display: inline-block;
+    margin: 5px 0 5px 0;
+}
+
+.summary_panel {
+    background-color: white;
+    width: 100%;
+    height: 20vh;
+    padding: 10px;
+    margin-top: 50px;
+
+}
+
+.application .green_button {
+    background-color: #27c7ab;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    width: 50%;
+    padding: 20px 10px;
+    font-size: 1.3rem;
+    display: inline-block;
+    font-family: 'ralewaymedium', Arial, Tahoma, sans-serif;
+    margin: 30px auto;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-left: 25%;
+}
+
+.panel_left {
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e7e7e7;
+    height: 80%;
+}
+
+.panel_right {
+    display: inline-block;
+    width: 50%;
+    border-left: 1px solid #e7e7e7;
+    text-align: right;
+    vertical-align: top;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e7e7e7;
+    height: 80%;
+}
+
+.panel_left h4,
+.panel_right h4 {
+    color: #24baa0;
+    font-size: 23px;
+}
+
+.panel_left span {
+    margin-top: 10px;
+    font-size: 22px;
+    color: #5b5a5a;
+    display: block;
+}
+
+.panel_right span {
+    display: block;
+    font-size: 22px;
+    color: #24baa0;
+    margin-top: 10px;
+}
+
+.sum_label {
+    display: inline-block;
+    width: 45%;
+    margin-top: 10px;
+    font-size: 22px;
+    color: #5b5a5a;
+}
+
+.sum {
+    display: inline-block;
+    width: 23%;
+    text-align: right;
+    margin-top: 10px;
+    font-size: 22px;
+    color: #24baa0;
+}
+
+.list_arrow {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #24baa0;
+    display: block;
+    position: absolute;
+    right: 5%;
+    bottom: 25%;
+    cursor: pointer;
+}
+
+.list_panel {
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 50%;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    list-style: none;
+    margin: 0;
+    left: 0px;
+    z-index: 2;
+    position: absolute;
+    top: 54px;
+    display: none;
+}
+
+.list_panel li {
+    margin-top: 10px;
+    cursor: pointer;
+    color: #585858;
+}
+
+.title {
+    height: 30px;
+}
+
+.image_part img {
+    width: 80%;
+}
+
+
+
+/*/////////////MEDIA QUERIES ////////////*/
+
+@media only screen and (max-width:320px) {
+
+    .list_label {
+        font-size: 1.5rem;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .drop_down_list {
+        width: 90%;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        height: 10vh;
+    }
+    .logo {
+        font-size: 1.5rem;
+        margin: 0 auto;
+    }
+    header li {
+        display: none;
+    }
+    .changePrev,
+    .changeNext {
+        display: none;
+    }
+    .mainPhoto,
+    .mainPhoto img {
+        width: 100%;
+        height: auto;
+    }
+    .mainSlider {
+        flex-wrap: wrap;
+        margin: 0;
+        margin: 0 auto;
+    }
+    .mainSlider h1 {
+        margin: 0;
+        font-size: 2rem;
+    }
+    .mainSlider p {
+        display: none;
+    }
+    .mainSlider button {
+        width: 60%;
+        font-size: 16px;
+        height: 50px;
+        margin-bottom: 30px;
+    }
+    .mainText {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    .boxes {
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .box {
+        width: 100%;
+        min-height: 40vh;
+    }
+    .box:nth-child(2) {
+        margin: 0;
+    }
+    .box:nth-child(3) h3 {
+        width: 75%;
+    }
+    .box:nth-child(3) {
+        height: auto;
+        text-align: justify;
+    }
+    .opacityBackground {
+        transform: none;
+    }
+    .cost {
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .costbox {
+        width: 90%;
+        height: auto;
+        padding-bottom: 40%;
+    }
+    .container h2 {
+        text-align: center;
+        width: 50%;
+        margin-left: 0;
+        margin-top: 0;
+        margin: 3% auto;
+    }
+    .costbox h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10%;
+    }
+    .costDarkGrayRow {
+        height: 10vh;
+    }
+    .costLightGrayRow {
+        height: 10vh;
+    }
+    .costbox button {
+        height: 50px;
+        width: 50%;
+    }
+    .costbox:nth-child(2) {
+        margin: 0;
+    }
+    .circle {
+        width: 125px;
+        height: 125px;
+    }
+    .costbox::before {
+        display: none;
+    }
+
+
+    .choice_part {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .choice_part h3 {
+        font-size: 1rem;
+    }
+
+    .checkbox.check-box {
+        display: flex;
+        justify-content: center;
+    }
+    .application .green_button {
+        width: 80%;
+        margin: 0;
+    }
+
+    .summary_part.inline {
+        display: flex;
+        justify-content: center;
+    }
+
+    .align_right {
+        display: none;
+    }
+
+    .main_width {
+        flex-wrap: wrap;
+    }
+
+    .drop_down_list {
+        margin: 20px auto;
+
+    }
+
+    .summary_panel {
+        display: none;
+    }
+
+    .inline {
+        width: 100%;
+    }
+
+    .application img {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .form {
+        margin: 0 auto;
+    }
+
+    .container.application {
+        width: 100%;
+    }
+    .smallContainer {
+        width: 95%;
+    }
+
+    .contact {
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .contactForm {
+        width: 100%;
+    }
+    .contactImg img {
+        display: none;
+    }
+    .contactImg {
+        width: 100%;
+    }
+    footer.container {
+        display: none;
+    }
+    .contact form input,
+    .contact form textarea {
+        margin: 3% 0;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .list_label {
+        font-size: 1.5rem;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .drop_down_list {
+        width: 90%;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        height: 10vh;
+    }
+    .logo {
+        font-size: 1.5rem;
+        margin: 0 auto;
+    }
+    header li {
+        display: none;
+    }
+    .changePrev,
+    .changeNext {
+        display: none;
+    }
+    .mainPhoto,
+    .mainPhoto img {
+        width: 100%;
+        height: auto;
+    }
+    .mainSlider {
+        flex-wrap: wrap;
+        margin: 0;
+        margin: 0 auto;
+    }
+    .mainSlider h1 {
+        margin: 0;
+        font-size: 2rem;
+    }
+    .mainSlider p {
+        display: none;
+    }
+    .mainSlider button {
+        width: 60%;
+        font-size: 16px;
+        height: 50px;
+        margin-bottom: 30px;
+    }
+    .mainText {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    .boxes {
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .box {
+        width: 100%;
+        min-height: 40vh;
+    }
+    .box:nth-child(2) {
+        margin: 0;
+    }
+    .box:nth-child(3) h3 {
+        width: 75%;
+    }
+    .box:nth-child(3) {
+        height: auto;
+        text-align: justify;
+    }
+    .opacityBackground {
+        transform: none;
+    }
+    .cost {
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .costbox {
+        width: 90%;
+        height: auto;
+        padding-bottom: 40%;
+    }
+    .container h2 {
+        text-align: center;
+        width: 50%;
+        margin-left: 0;
+        margin-top: 0;
+        margin: 3% auto;
+    }
+    .costbox h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10%;
+    }
+    .costDarkGrayRow {
+        height: 10vh;
+    }
+    .costLightGrayRow {
+        height: 10vh;
+    }
+    .costbox button {
+        height: 50px;
+        width: 50%;
+    }
+    .costbox:nth-child(2) {
+        margin: 0;
+    }
+    .circle {
+        width: 125px;
+        height: 125px;
+    }
+    .costbox::before {
+        display: none;
+    }
+
+
+    .choice_part {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .choice_part h3 {
+        font-size: 1rem;
+    }
+
+    .checkbox.check-box {
+        display: flex;
+        justify-content: center;
+    }
+    .application .green_button {
+        width: 80%;
+        margin: 0;
+    }
+
+    .summary_part.inline {
+        display: flex;
+        justify-content: center;
+    }
+
+    .align_right {
+        display: none;
+    }
+
+    .main_width {
+        flex-wrap: wrap;
+    }
+
+    .drop_down_list {
+        margin: 20px auto;
+
+    }
+
+    .summary_panel {
+        display: none;
+    }
+
+    .inline {
+        width: 100%;
+    }
+
+    .application img {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .form {
+        margin: 0 auto;
+    }
+
+    .container.application {
+        width: 100%;
+    }
+    .smallContainer {
+        width: 95%;
+    }
+
+    .contact {
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .contactForm {
+        width: 100%;
+    }
+    .contactImg img {
+        display: none;
+    }
+    .contactImg {
+        width: 100%;
+    }
+    footer.container {
+        display: none;
+    }
+    .contact form input,
+    .contact form textarea {
+        margin: 3% 0;
+    }
+}
+
+@media only screen and (max-width:640px) {
+    .list_label {
+        font-size: 1.5rem;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .drop_down_list {
+        width: 90%;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        height: 10vh;
+    }
+    .logo {
+        font-size: 1.5rem;
+        margin: 0 auto;
+    }
+    header li {
+        display: none;
+    }
+    .changePrev,
+    .changeNext {
+        display: none;
+    }
+    .mainPhoto,
+    .mainPhoto img {
+        width: 100%;
+        height: auto;
+    }
+    .mainSlider {
+        flex-wrap: wrap;
+        margin: 0;
+        margin: 0 auto;
+    }
+    .mainSlider h1 {
+        margin: 0;
+        font-size: 2rem;
+    }
+    .mainSlider p {
+        display: none;
+    }
+    .mainSlider button {
+        width: 60%;
+        font-size: 16px;
+        height: 50px;
+        margin-bottom: 30px;
+    }
+    .mainText {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    .boxes {
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .box {
+        width: 100%;
+        min-height: 40vh;
+    }
+    .box:nth-child(2) {
+        margin: 0;
+    }
+    .box:nth-child(3) h3 {
+        width: 75%;
+    }
+    .box:nth-child(3) {
+        height: auto;
+        text-align: justify;
+    }
+    .opacityBackground {
+        transform: none;
+    }
+    .cost {
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .costbox {
+        width: 90%;
+        height: auto;
+        padding-bottom: 40%;
+    }
+    .container h2 {
+        text-align: center;
+        width: 50%;
+        margin-left: 0;
+        margin-top: 0;
+        margin: 3% auto;
+    }
+    .costbox h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10%;
+    }
+    .costDarkGrayRow {
+        height: 10vh;
+    }
+    .costLightGrayRow {
+        height: 10vh;
+    }
+    .costbox button {
+        height: 50px;
+        width: 50%;
+    }
+    .costbox:nth-child(2) {
+        margin: 0;
+    }
+    .circle {
+        width: 125px;
+        height: 125px;
+    }
+    .costbox::before {
+        display: none;
+    }
+
+
+    .choice_part {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .choice_part h3 {
+        font-size: 1rem;
+    }
+
+    .checkbox.check-box {
+        display: flex;
+        justify-content: center;
+    }
+    .application .green_button {
+        width: 80%;
+        margin: 0;
+    }
+
+    .summary_part.inline {
+        display: flex;
+        justify-content: center;
+    }
+
+    .align_right {
+        display: none;
+    }
+
+    .main_width {
+        flex-wrap: wrap;
+    }
+
+    .drop_down_list {
+        margin: 20px auto;
+
+    }
+
+    .summary_panel {
+        display: none;
+    }
+
+    .inline {
+        width: 100%;
+    }
+
+    .application img {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .form {
+        margin: 0 auto;
+    }
+
+    .container.application {
+        width: 100%;
+    }
+    .smallContainer {
+        width: 95%;
+    }
+
+    .contact {
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .contactForm {
+        width: 100%;
+    }
+    .contactImg img {
+        display: none;
+    }
+    .contactImg {
+        width: 100%;
+    }
+    footer.container {
+        display: none;
+    }
+    .contact form input,
+    .contact form textarea {
+        margin: 3% 0;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .list_label {
+        font-size: 1.5rem;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .drop_down_list {
+        width: 90%;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        height: 10vh;
+    }
+    .logo {
+        font-size: 1.5rem;
+        margin: 0 auto;
+    }
+    header li {
+        display: none;
+    }
+    .changePrev,
+    .changeNext {
+        display: none;
+    }
+    .mainPhoto,
+    .mainPhoto img {
+        width: 100%;
+        height: auto;
+    }
+    .mainSlider {
+        flex-wrap: wrap;
+        margin: 0;
+        margin: 0 auto;
+    }
+    .mainSlider h1 {
+        margin: 0;
+        font-size: 2rem;
+    }
+    .mainSlider p {
+        display: none;
+    }
+    .mainSlider button {
+        width: 60%;
+        font-size: 16px;
+        height: 50px;
+        margin-bottom: 30px;
+    }
+    .mainText {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    .boxes {
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .box {
+        width: 100%;
+        min-height: 40vh;
+    }
+    .box:nth-child(2) {
+        margin: 0;
+    }
+    .box:nth-child(3) h3 {
+        width: 75%;
+    }
+    .box:nth-child(3) {
+        height: auto;
+        text-align: justify;
+    }
+    .opacityBackground {
+        transform: none;
+    }
+    .cost {
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .costbox {
+        width: 90%;
+        height: auto;
+        padding-bottom: 40%;
+    }
+    .container h2 {
+        text-align: center;
+        width: 50%;
+        margin-left: 0;
+        margin-top: 0;
+        margin: 3% auto;
+    }
+    .costbox h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10%;
+    }
+    .costDarkGrayRow {
+        height: 10vh;
+    }
+    .costLightGrayRow {
+        height: 10vh;
+    }
+    .costbox button {
+        height: 50px;
+        width: 50%;
+    }
+    .costbox:nth-child(2) {
+        margin: 0;
+    }
+    .circle {
+        width: 125px;
+        height: 125px;
+    }
+    .costbox::before {
+        display: none;
+    }
+
+
+    .choice_part {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .choice_part h3 {
+        font-size: 1rem;
+    }
+
+    .checkbox.check-box {
+        display: flex;
+        justify-content: center;
+    }
+    .application .green_button {
+        width: 80%;
+        margin: 0;
+    }
+
+    .summary_part.inline {
+        display: flex;
+        justify-content: center;
+    }
+
+    .align_right {
+        display: none;
+    }
+
+    .main_width {
+        flex-wrap: wrap;
+    }
+
+    .drop_down_list {
+        margin: 20px auto;
+
+    }
+
+    .summary_panel {
+        display: none;
+    }
+
+    .inline {
+        width: 100%;
+    }
+
+    .application img {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .form {
+        margin: 0 auto;
+    }
+
+    .container.application {
+        width: 100%;
+    }
+    .smallContainer {
+        width: 95%;
+    }
+
+    .contact {
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .contactForm {
+        width: 100%;
+    }
+    .contactImg img {
+        display: none;
+    }
+    .contactImg {
+        width: 100%;
+    }
+    footer.container {
+        display: none;
+    }
+    .contact form input,
+    .contact form textarea {
+        margin: 3% 0;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    .list_label {
+        font-size: 1.5rem;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .drop_down_list {
+        width: 90%;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        height: 10vh;
+    }
+    .logo {
+        font-size: 1.5rem;
+        margin: 0 auto;
+    }
+    header li {
+        display: none;
+    }
+    .changePrev,
+    .changeNext {
+        display: none;
+    }
+    .mainPhoto,
+    .mainPhoto img {
+        width: 100%;
+        height: auto;
+    }
+    .mainSlider {
+        flex-wrap: wrap;
+        margin: 0;
+        margin: 0 auto;
+    }
+    .mainSlider h1 {
+        margin: 0;
+        font-size: 2rem;
+    }
+    .mainSlider p {
+        display: none;
+    }
+    .mainSlider button {
+        width: 60%;
+        font-size: 16px;
+        height: 50px;
+        margin-bottom: 30px;
+    }
+    .mainText {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    .boxes {
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .box {
+        width: 100%;
+        min-height: 40vh;
+    }
+    .box:nth-child(2) {
+        margin: 0;
+    }
+    .box:nth-child(3) h3 {
+        width: 75%;
+    }
+    .box:nth-child(3) {
+        height: auto;
+        text-align: justify;
+    }
+    .opacityBackground {
+        transform: none;
+    }
+    .cost {
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .costbox {
+        width: 90%;
+        height: auto;
+        padding-bottom: 40%;
+    }
+    .container h2 {
+        text-align: center;
+        width: 50%;
+        margin-left: 0;
+        margin-top: 0;
+        margin: 3% auto;
+    }
+    .costbox h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10%;
+    }
+    .costDarkGrayRow {
+        height: 10vh;
+    }
+    .costLightGrayRow {
+        height: 10vh;
+    }
+    .costbox button {
+        height: 50px;
+        width: 50%;
+    }
+    .costbox:nth-child(2) {
+        margin: 0;
+    }
+    .circle {
+        width: 125px;
+        height: 125px;
+    }
+    .costbox::before {
+        display: none;
+    }
+
+
+    .choice_part {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .choice_part h3 {
+        font-size: 1rem;
+    }
+
+    .checkbox.check-box {
+        display: flex;
+        justify-content: center;
+    }
+    .application .green_button {
+        width: 80%;
+        margin: 0;
+    }
+
+    .summary_part.inline {
+        display: flex;
+        justify-content: center;
+    }
+
+    .align_right {
+        display: none;
+    }
+
+    .main_width {
+        flex-wrap: wrap;
+    }
+
+    .drop_down_list {
+        margin: 20px auto;
+
+    }
+
+    .summary_panel {
+        display: none;
+    }
+
+    .inline {
+        width: 100%;
+    }
+
+    .application img {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .form {
+        margin: 0 auto;
+    }
+
+    .container.application {
+        width: 100%;
+    }
+    .smallContainer {
+        width: 95%;
+    }
+
+    .contact {
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .contactForm {
+        width: 100%;
+    }
+    .contactImg img {
+        display: none;
+    }
+    .contactImg {
+        width: 100%;
+    }
+    footer.container {
+        display: none;
+    }
+    .contact form input,
+    .contact form textarea {
+        margin: 3% 0;
+    }
+}
+
+@media only screen and (max-width:1080px) {
+    .list_label {
+        font-size: 1.5rem;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .drop_down_list {
+        width: 90%;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        height: 10vh;
+    }
+    .logo {
+        font-size: 1.5rem;
+        margin: 0 auto;
+    }
+    header li {
+        display: none;
+    }
+    .changePrev,
+    .changeNext {
+        display: none;
+    }
+    .mainPhoto,
+    .mainPhoto img {
+        width: 100%;
+        height: auto;
+    }
+    .mainSlider {
+        flex-wrap: wrap;
+        margin: 0;
+        margin: 0 auto;
+    }
+    .mainSlider h1 {
+        margin: 0;
+        font-size: 2rem;
+    }
+    .mainSlider p {
+        display: none;
+    }
+    .mainSlider button {
+        width: 60%;
+        font-size: 16px;
+        height: 50px;
+        margin-bottom: 30px;
+    }
+    .mainText {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    .boxes {
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .box {
+        width: 100%;
+        min-height: 40vh;
+    }
+    .box:nth-child(2) {
+        margin: 0;
+    }
+    .box:nth-child(3) h3 {
+        width: 75%;
+    }
+    .box:nth-child(3) {
+        height: auto;
+        text-align: justify;
+    }
+    .opacityBackground {
+        transform: none;
+    }
+    .cost {
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .costbox {
+        width: 90%;
+        height: auto;
+        padding-bottom: 40%;
+    }
+    .container h2 {
+        text-align: center;
+        width: 50%;
+        margin-left: 0;
+        margin-top: 0;
+        margin: 3% auto;
+    }
+    .costbox h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10%;
+    }
+    .costDarkGrayRow {
+        height: 10vh;
+    }
+    .costLightGrayRow {
+        height: 10vh;
+    }
+    .costbox button {
+        height: 50px;
+        width: 50%;
+    }
+    .costbox:nth-child(2) {
+        margin: 0;
+    }
+    .circle {
+        width: 125px;
+        height: 125px;
+    }
+    .costbox::before {
+        display: none;
+    }
+
+
+    .choice_part {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .choice_part h3 {
+        font-size: 1rem;
+    }
+
+    .checkbox.check-box {
+        display: flex;
+        justify-content: center;
+    }
+    .application .green_button {
+        width: 80%;
+        margin: 0;
+    }
+
+    .summary_part.inline {
+        display: flex;
+        justify-content: center;
+    }
+
+    .align_right {
+        display: none;
+    }
+
+    .main_width {
+        flex-wrap: wrap;
+    }
+
+    .drop_down_list {
+        margin: 20px auto;
+
+    }
+
+    .summary_panel {
+        display: none;
+    }
+
+    .inline {
+        width: 100%;
+    }
+
+    .application img {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .form {
+        margin: 0 auto;
+    }
+
+    .container.application {
+        width: 100%;
+    }
+    .smallContainer {
+        width: 95%;
+    }
+
+    .contact {
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .contactForm {
+        width: 100%;
+    }
+    .contactImg img {
+        display: none;
+    }
+    .contactImg {
+        width: 100%;
+    }
+    footer.container {
+        display: none;
+    }
+    .contact form input,
+    .contact form textarea {
+        margin: 3% 0;
+    }
+}
+
+@media only screen and (min-width:1081px) and (max-width: 1366px) {
+    .mainText p {
+        width: 80%;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    .costDarkGrayRow {
+        font-size: 1rem;
+        height: 5vh;
+    }
+    .costLightGrayRow {
+        font-size: 1rem;
+        height: 5vh;
+    }
+    .costbox {
+        min-height: 65vh;
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (min-width:1366px) and (max-width: 1600px) {
+    .mainText p {
+        width: 80%;
+    }
+    .costbox {
+        min-height: 65vh;
+        margin-top: 50px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    .costDarkGrayRow {
+        font-size: 1rem;
+        height: 5vh;
+    }
+    .costLightGrayRow {
+        font-size: 1rem;
+        height: 5vh;
+    }
+}
